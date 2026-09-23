@@ -1,10 +1,11 @@
 {
-  "name": "codepen-clone",
+  "name": "react-embedded-sandbox",
+  "description": "A lightweight, privacy-first front-end execution sandbox built in React for offline development, educational platforms, and technical documentation.",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "codepen-clone": "vite",
+    "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },

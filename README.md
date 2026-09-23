@@ -1,21 +1,27 @@
-# Codepen Clone <a name="title"></a>
+# React Embedded Sandbox <a name="title"></a>
 
-This projects aims at re-creating the popular [Codepen](https://codepen.io/) with all of its functionality
+A lightweight, privacy-first front-end execution sandbox built in React for offline development, educational platforms, and technical documentation.
 
-Find it live [here](https://rebrand.ly/favourz-codepen)
+## Why This Exists? <a name="why-this-exists"></a>
 
-The project allows users to:
+Heavy cloud-based editors are bloated and often require persistent internet connections. We needed a lightweight, embeddable execution environment that doesn't track users, load heavy tracking scripts, or require a backend to function. This project is designed as an open-source front-end execution sandbox to be embedded into documentation sites, educational platforms, and local dev environments.
 
-- Write HTML, CSS and Javascipt Code
-- See the live results in the results pane
-- View and log elements or variables to the console terminal, which can be activated by the `Run Console` button in the bottom right of the application
-- Toggle the view of the application and alter where the editor/results will be positioned
-- Toggle dark mode
-- Saves code in localstorage on the occassion of a slow network.
+## Security & Limitations <a name="security-and-limitations"></a>
+
+Executing user code directly in the browser is inherently dangerous. Due to the complexities of handling arbitrary HTML/CSS/JS, there are significant risks of XSS (Cross-Site Scripting) and iframe sandboxing escapes. We are actively threat-modeling the application for code-injection vulnerabilities. All pull requests must undergo strict security reviews to ensure we don't introduce XSS vulnerabilities or break iframe isolation.
+
+## Use Cases <a name="use-cases"></a>
+
+- **Educational Platforms**: Embedding safe coding environments for students.
+- **Technical Documentation**: Interactive code snippets in Markdown documentation.
+- **Offline Development**: Local testing without requiring an internet connection.
 
 ## 📝 Table of Contents
 
 - [Title and Description](#title)
+- [Why this exists?](#why-this-exists)
+- [Security & Limitations](#security-and-limitations)
+- [Use Cases](#use-cases)
 - [Getting Started](#getting-started)
 - [Installation](#installation)
 - [Screenshots](#screenshots)
@@ -44,13 +50,13 @@ Open your command terminal in the root directory of the project.
 Clone the project
 
 ```bash
-  git clone https://github.com/Favourz1/Codepen-clone.git
+  git clone https://github.com/Favourz1/react-embedded-sandbox.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd Codepen-clone
+  cd react-embedded-sandbox
 ```
 
 Installing dependencies
@@ -62,16 +68,16 @@ npm install
 Starting local server
 
 ```
-npm run codepen-clone
+npm run dev
 ```
 
-The devlopment files are stored in the `./src/` folder.
+The development files are stored in the `./src/` folder.
 
 ## 🖥 Sceenshots <a name="screenshots"></a>
 
 <p align="center">
   <a href="" rel="noopener">
- <img width=100% height=500px style="min-height:"200px"" src="./public/live-demo.png" alt="Project demo"></a>
+ <img width=100% height=500px style="min-height: 200px" src="./public/live-demo.png" alt="Project demo"></a>
 </p>
 
 ---
@@ -92,10 +98,6 @@ The devlopment files are stored in the `./src/` folder.
 - ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 - ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 - ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
-- ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
-- ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
-- ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-- ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
 ## License <a name="license"></a>
 
