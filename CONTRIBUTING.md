@@ -1,12 +1,18 @@
 # Contributing Guide
 
-- Contributing to The Documentation Compendium is fairly easy. This document shows you how to get started
+- Contributing to React Embedded Sandbox is fairly easy. This document shows you how to get started.
 
 ## General
 
-- The codebase structure has detailed information about how the various files in this project are structured
+- The codebase structure has detailed information about how the various files in this project are structured.
 - Please ensure that any changes you make are in accordance with the standard coding guidelines for readability and reusability in this repo.
 - Please follow [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) when pushing a commit.
+
+## Important Note on Security & Maintenance Bottlenecks
+
+Because this is an execution environment, **all PRs must undergo strict security reviews to ensure we don't introduce XSS vulnerabilities or break iframe isolation.** 
+
+Handling arbitrary user code on the frontend safely is incredibly difficult. We are currently experiencing a significant maintenance burden. We are actively looking for contributors to help build **AI-powered CI/CD pipelines** to manage the heavy PR review burden, automate XSS regression testing, and help maintainers focus on core architecture. 
 
 ## Codebase Structure
 
@@ -20,12 +26,12 @@
 
 [Custom React Hooks](./src/hooks)
 
-[Main File](./src//App.jsx)
+[Main File](./src/App.jsx)
 
 ## Submitting changes
 
 - Fork the repo
-  - <https://github.com/Favourz1/Codepen-clone.git>
+  - <https://github.com/Favourz1/react-embedded-sandbox.git>
 - Check out a new branch based and name it to what you intend to do:
   - Example:
     ```
@@ -50,7 +56,7 @@
     $ git push origin BRANCH_NAME
     ```
 - Make a pull request
-  - Make sure you send the PR to the <code>fooBar</code> branch
+  - Make sure you send the PR to the `main` branch
 
 If you follow these instructions, your PR will land pretty safely in the main repo!
 
